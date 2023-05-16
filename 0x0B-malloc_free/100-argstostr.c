@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	int k = 0;
 
 	if (ac == 0 || av == NULL)
-		return NULL;
+		return (NULL);
 
 	/* Calculate the total length of the arguments */
 	for (i = 0; i < ac; i++)
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 
 	str = malloc((total_len + 1) * sizeof(char));
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	/* Copy the arguments to the concatenated string */
 	for (i = 0; i < ac; i++)
@@ -39,5 +39,5 @@ char *argstostr(int ac, char **av)
 
 	str[k] = '\0'; /* Add the null terminator */
 
-	return str;
+	return (str);
 }
